@@ -11,74 +11,96 @@
 <!-- ===== HEADER ========================= -->
 
 	<header class="page-header">
-		<nav>
-			<h2>Shoply.</h2>
-			<button type="button"><span class="hidden">Open/close menu</span></button>
-			<ul>
-				<li><a href="#">Catalog</a></li>
-				<li><a href="#">Shipping</a></li>
-				<li><a href="#">Terms of use</a></li>
-				<li><a href="#">About us</a></li>
+		<nav class="site-nav">
+			<h2 class="site-nav__title">Shoply.</h2>
+			<button class="site-nav__show btn-reset" type="button"><span class="hidden">Open/close menu</span></button>
+			<ul class="site-nav__list">
+				<li class="site-nav__item">
+					<a class="site-nav__link" href="#">Catalog</a>
+				</li>
+				<li class="site-nav__item">
+					<a class="site-nav__link" href="#">Shipping</a>
+				</li>
+				<li class="site-nav__item">
+					<a class="site-nav__link" href="#">Terms of use</a>
+				</li>
+				<li class="site-nav__item">
+					<a class="site-nav__link" href="#">About us</a>
+				</li>
+			</ul>
+			<ul class="user-tools">
+				<li class="user-tools__item">
+					<a class="user-tools__link user-tools__link--cart" href="#">
+						<span class="hidden">Count of goods:</span>3
+					</a>
+				</li>
 			</ul>
 		</nav>
 
-		<ul>
-			<li>
-				<a href="#" title="cart">
-					<span class="hidden">Count of goods:</span>
-					<span>3</span>
-				</a>
-			</li>
-		</ul>
-
-		<form action="https://echo.htmlacademy.ru" method="get">
-			<label class="hidden" for=""></label>
-			<input type="text">
-			<button class="hidden" type="submit">Search</button>
+		<form class="search" action="https://echo.htmlacademy.ru" method="get">
+			<label class="hidden" class="hidden" for="search-input">Search</label>
+			<input class="search__input input-reset" type="text" id="search-input" name="search">
+			<button class="hidden" type="submit">Find</button>
 		</form>
 	</header>
 
 <!-- ===== CONTENT ======================== -->
 
 	<main class="page-main">
-		<h1><span>Durbea</span> Racing bicycle</h1>
+		<h1 class="page-main__title">
+			Durbea <span class="color">Racing bicycle</span>
+		</h1>
 
-		<a href="#">Watch video</a>
+		<a class="watch-video" href="#">Watch video</a>
 
-		<ul>
-			<li>
-				<h3>02/04</h3>
-				<img src="" width="" height="" alt="bicycle 2">
-				<div>$1242 <span>usd</span></div>
-				<a href="">Read <span>more</span></a>
-			</li>
-		</ul>
+		<section class="showcase">
+			<h2 class="hidden">Showcase</h2>
+			<article class="showcase__item product">
+				<h3 class="hidden">bicycle 2</h3>
+				<img class="product__img" src="img/bicycle-2.png" width="724" height="423" alt="bicycle 2, price $1242">
+				<div class="product__price">$1242 <span class="color">usd</span></div>
+				<a class="product__link" href="#">Buy now</a>
+				<a class="product__link" href="#">Read <span class="color">more</span></a>
+			</article>
 
-		<ol aria-label="the slide navigation">
-			<li>
-				<a href="#"><img src="" width="" height="" alt="bicycle 1"></a>
-			</li>
-			<li aria-current="page">
-				<a><img src="" width="" height="" alt="bicycle 2"></a>
-			</li>
-			<li>
-				<a href="#"><img src="" width="" height="" alt="bicycle 3"></a>
-			</li>
-			<li>
-				<a href="#"><img src="" width="" height="" alt="bicycle 4"></a>
-			</li>
-		</ol>
+			<section class="showcase-nav">
+				<h3 class="hidden">the showcase navigation</h3>
+				<div class="showcase-nav__number">
+					<span class="color">02</span>/<sub class="showcase-nav__number-count">04</sub>
+				</div>
+				<ol class="showcase-nav__list">
+					<li class="showcase-nav__item">
+						<a class="showcase-nav__link" href="#">
+							<img class="showcase-nav__img" src="img/nav-bicycle-1.png" width="61" height="61" alt="bicycle 1">
+						</a>
+					</li>
+					<li class="showcase-nav__item showcase-nav__item--active" aria-current="page">
+						<a class="showcase-nav__link showcase-nav__link--active">
+							<img class="showcase-nav__img" src="img/nav-bicycle-2.png" width="82" height="82" alt="bicycle 2">
+						</a>
+					</li>
+					<li class="showcase-nav__item">
+						<a class="showcase-nav__link" href="#">
+							<img class="showcase-nav__img" src="img/nav-bicycle-3.png" width="61" height="61" alt="bicycle 3">
+						</a>
+					</li>
+					<li class="showcase-nav__item">
+						<a class="showcase-nav__link" href="#">
+							<img class="showcase-nav__img" src="img/nav-bicycle-4.png" width="61" height="61" alt="bicycle 4">
+						</a>
+					</li>
+				</ol>
+				<button class="showcase-nav__btn showcase-nav__btn--prev btn-reset" type="button" disabled><span class="hidden">Previous product</span></button>
+				<button class="showcase-nav__btn showcase-nav__btn--next btn-reset" type="button"><span class="hidden">Next product</span></button>
+			</section>
+		</section>
 
-		<div>
-			<button type="button" disabled><span class="hidden">Previous</span></button>
-			<button type="button"><span class="hidden">Next</span></button>
-		</div>
 	</main>
 
 <!-- ===== FOOTER ========================= -->
 
 	<footer class="page-footer">
-		<p>Design by &copy; <a href="https://dribbble.com/unnoman">Noman Abdullah</a></p>
+		<p class="copyright">Design by @ <a class="copyright__link color" href="https://dribbble.com/unnoman">Noman Abdullah</a></p>
 	</footer>
 
 </body>
