@@ -11,9 +11,15 @@
 <!-- ===== HEADER ========================= -->
 
 	<header class="page-header">
+		<form class="search" action="https://echo.htmlacademy.ru" method="get">
+			<label class="search__label" for="search-input"><span class="hidden">Search</span>
+			<input class="search__input input-reset" type="text" id="search-input" name="search"></label>
+			<button class="hidden" type="submit">Find</button>
+		</form>
+
 		<nav class="site-nav">
 			<h2 class="site-nav__title">Shoply.</h2>
-			<button class="site-nav__show btn-reset" type="button"><span class="hidden">Open/close menu</span></button>
+			<button class="site-nav__btn btn-reset" type="button"><span class="hidden">Open/close menu</span></button>
 			<ul class="site-nav__list">
 				<li class="site-nav__item">
 					<a class="site-nav__link" href="#">Catalog</a>
@@ -29,26 +35,20 @@
 				</li>
 			</ul>
 			<ul class="user-tools">
-				<li class="user-tools__item">
+				<li class="user-tools__item user-tools__item--cart">
 					<a class="user-tools__link user-tools__link--cart" href="#">
-						<span class="hidden">Count of goods:</span>3
+						<span class="hidden">Count of goods:</span><span class="user-tools__count">3</span>
 					</a>
 				</li>
 			</ul>
 		</nav>
-
-		<form class="search" action="https://echo.htmlacademy.ru" method="get">
-			<label class="hidden" class="hidden" for="search-input">Search</label>
-			<input class="search__input input-reset" type="text" id="search-input" name="search">
-			<button class="hidden" type="submit">Find</button>
-		</form>
 	</header>
 
 <!-- ===== CONTENT ======================== -->
 
 	<main class="page-main">
 		<h1 class="page-main__title">
-			Durbea <span class="color">Racing bicycle</span>
+			Durbea <div class="color">Racing bicycle</div>
 		</h1>
 
 		<a class="watch-video" href="#">Watch video</a>
@@ -59,18 +59,18 @@
 				<h3 class="hidden">bicycle 2</h3>
 				<img class="product__img" src="img/bicycle-2.png" width="724" height="423" alt="bicycle 2, price $1242">
 				<div class="product__price">$1242 <span class="color">usd</span></div>
-				<a class="product__link" href="#">Buy now</a>
-				<a class="product__link" href="#">Read <span class="color">more</span></a>
+				<a class="product__link product__link--more" href="#">Read <span class="color">more</span></a>
+				<a class="product__link product__link--buy" href="#">Buy now</a>
 			</article>
 
 			<section class="showcase-nav">
 				<h3 class="hidden">the showcase navigation</h3>
 				<div class="showcase-nav__number">
-					<span class="color">02</span>/<sub class="showcase-nav__number-count">04</sub>
+					<span class="color">02</span>/<span class="showcase-nav__number-count">04</span>
 				</div>
 				<ol class="showcase-nav__list">
-					<li class="showcase-nav__item">
-						<a class="showcase-nav__link" href="#">
+					<li class="showcase-nav__item showcase-nav__item--active">
+						<a class="showcase-nav__link showcase-nav__link--active" href="#">
 							<img class="showcase-nav__img" src="img/nav-bicycle-1.png" width="61" height="61" alt="bicycle 1">
 						</a>
 					</li>
@@ -90,8 +90,8 @@
 						</a>
 					</li>
 				</ol>
-				<button class="showcase-nav__btn showcase-nav__btn--prev btn-reset" type="button" disabled><span class="hidden">Previous product</span></button>
-				<button class="showcase-nav__btn showcase-nav__btn--next btn-reset" type="button"><span class="hidden">Next product</span></button>
+				<button class="showcase-nav__btn showcase-nav__btn--prev btn-reset" type="button" disabled><span class="hidden">Previous product</span>&larr;</button>
+				<button class="showcase-nav__btn showcase-nav__btn--next btn-reset" type="button"><span class="hidden">Next product</span>&rarr;</button>
 			</section>
 		</section>
 
