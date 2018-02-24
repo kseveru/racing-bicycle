@@ -7,101 +7,111 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<div class="page-wrap">
+	<!-- ===== HEADER ========================= -->
 
-<!-- ===== HEADER ========================= -->
+		<header class="page-header">
+			<form class="search" action="https://echo.htmlacademy.ru" method="get">
+				<label class="search__label" for="search-input"><span class="hidden">Search</span>
+				<input class="search__input input-reset" type="text" id="search-input" name="search"></label>
+				<button class="hidden" type="submit">Find</button>
+			</form>
 
-	<header class="page-header">
-		<form class="search" action="https://echo.htmlacademy.ru" method="get">
-			<label class="search__label" for="search-input"><span class="hidden">Search</span>
-			<input class="search__input input-reset" type="text" id="search-input" name="search"></label>
-			<button class="hidden" type="submit">Find</button>
-		</form>
-
-		<nav class="site-nav">
-			<h2 class="site-nav__title">Shoply.</h2>
-			<button class="site-nav__btn btn-reset" type="button"><span class="hidden">Open/close menu</span></button>
-			<ul class="site-nav__list">
-				<li class="site-nav__item">
-					<a class="site-nav__link" href="#">Catalog</a>
-				</li>
-				<li class="site-nav__item">
-					<a class="site-nav__link" href="#">Shipping</a>
-				</li>
-				<li class="site-nav__item">
-					<a class="site-nav__link" href="#">Terms of use</a>
-				</li>
-				<li class="site-nav__item">
-					<a class="site-nav__link" href="#">About us</a>
-				</li>
-			</ul>
-			<ul class="user-tools">
-				<li class="user-tools__item user-tools__item--cart">
-					<a class="user-tools__link user-tools__link--cart" href="#">
-						<span class="hidden">Count of goods:</span><span class="user-tools__count">3</span>
-					</a>
-				</li>
-			</ul>
-		</nav>
-	</header>
-
-<!-- ===== CONTENT ======================== -->
-
-	<main class="page-main">
-		<h1 class="page-main__title">
-			Durbea <div class="color">Racing bicycle</div>
-		</h1>
-
-		<a class="watch-video" href="#">Watch video</a>
-
-		<section class="showcase">
-			<h2 class="hidden">Showcase</h2>
-			<article class="showcase__item product">
-				<h3 class="hidden">bicycle 2</h3>
-				<img class="product__img" src="img/bicycle-2.png" width="724" height="423" alt="bicycle 2, price $1242">
-				<div class="product__price">$1242 <span class="color">usd</span></div>
-				<a class="product__link product__link--more" href="#">Read <span class="color">more</span></a>
-				<a class="product__link product__link--buy" href="#">Buy now</a>
-			</article>
-
-			<section class="showcase-nav">
-				<h3 class="hidden">the showcase navigation</h3>
-				<div class="showcase-nav__number">
-					<span class="color">02</span>/<span class="showcase-nav__number-count">04</span>
-				</div>
-				<ol class="showcase-nav__list">
-					<li class="showcase-nav__item showcase-nav__item--active">
-						<a class="showcase-nav__link showcase-nav__link--active" href="#">
-							<img class="showcase-nav__img" src="img/nav-bicycle-1.png" width="61" height="61" alt="bicycle 1">
+			<nav class="main-nav">
+				<h2 class="main-nav__title">Shoply.</h2>
+				<button class="main-nav__btn btn-reset" type="button"><span class="hidden">Open/close menu</span></button>
+				<ul class="main-nav__list site-nav">
+					<li class="site-nav__item">
+						<a class="site-nav__link" href="#">Catalog</a>
+					</li>
+					<li class="site-nav__item">
+						<a class="site-nav__link" href="#">Shipping</a>
+					</li>
+					<li class="site-nav__item">
+						<a class="site-nav__link" href="#">Terms of use</a>
+					</li>
+					<li class="site-nav__item">
+						<a class="site-nav__link" href="#">About us</a>
+					</li>
+				</ul>
+				<ul class="main-nav__list user-nav">
+					<li class="user-nav__item user-nav__item--cart">
+						<a class="user-nav__link user-nav__link--cart" href="#">
+							<span class="hidden">Count of goods:</span><span class="user-nav__cart-count">3</span>
 						</a>
 					</li>
-					<li class="showcase-nav__item showcase-nav__item--active" aria-current="page">
-						<a class="showcase-nav__link showcase-nav__link--active">
-							<img class="showcase-nav__img" src="img/nav-bicycle-2.png" width="82" height="82" alt="bicycle 2">
-						</a>
-					</li>
-					<li class="showcase-nav__item">
-						<a class="showcase-nav__link" href="#">
-							<img class="showcase-nav__img" src="img/nav-bicycle-3.png" width="61" height="61" alt="bicycle 3">
-						</a>
-					</li>
-					<li class="showcase-nav__item">
-						<a class="showcase-nav__link" href="#">
-							<img class="showcase-nav__img" src="img/nav-bicycle-4.png" width="61" height="61" alt="bicycle 4">
-						</a>
-					</li>
-				</ol>
-				<button class="showcase-nav__btn showcase-nav__btn--prev btn-reset" type="button" disabled><span class="hidden">Previous product</span>&larr;</button>
-				<button class="showcase-nav__btn showcase-nav__btn--next btn-reset" type="button"><span class="hidden">Next product</span>&rarr;</button>
+				</ul>
+			</nav>
+		</header>
+
+	<!-- ===== CONTENT ======================== -->
+
+		<main class="page-main">
+			<h1 class="page-main__title">
+				Durbea <div class="color">Racing bicycle</div>
+			</h1>
+
+			<a class="watch-video" href="#">Watch video</a>
+
+			<section class="showcase">
+				<h2 class="hidden">Showcase</h2>
+				<article class="showcase__item product">
+					<h3 class="hidden">bicycle 2</h3>
+					<img class="product__img" src="img/bicycle-2.png" width="724" height="423" alt="bicycle 2, price $1242">
+					<div class="product__price">$1242 <span class="color">usd</span></div>
+					<a class="product__link product__link--more" href="#">Read <span class="color">more</span></a>
+					<a class="product__link product__link--buy" href="#">Buy now</a>
+				</article>
+
+				<section class="showcase-nav">
+					<h3 class="hidden">the showcase navigation</h3>
+					<div class="showcase-nav__number">
+						<span class="color">02</span>/<span class="showcase-nav__number-count">04</span>
+					</div>
+					<ol class="showcase-nav__list">
+						<li class="showcase-nav__item showcase-nav__item--active">
+							<a class="showcase-nav__link showcase-nav__link--active" href="#">
+								<img class="showcase-nav__img" src="img/nav-bicycle-1.png" width="61" height="61" alt="bicycle 1">
+							</a>
+						</li>
+						<li class="showcase-nav__item showcase-nav__item--active" aria-current="page">
+							<a class="showcase-nav__link showcase-nav__link--active">
+								<img class="showcase-nav__img" src="img/nav-bicycle-2.png" width="82" height="82" alt="bicycle 2">
+							</a>
+						</li>
+						<li class="showcase-nav__item">
+							<a class="showcase-nav__link" href="#">
+								<img class="showcase-nav__img" src="img/nav-bicycle-3.png" width="61" height="61" alt="bicycle 3">
+							</a>
+						</li>
+						<li class="showcase-nav__item">
+							<a class="showcase-nav__link" href="#">
+								<img class="showcase-nav__img" src="img/nav-bicycle-4.png" width="61" height="61" alt="bicycle 4">
+							</a>
+						</li>
+					</ol>
+					<button class="showcase-nav__btn showcase-nav__btn--prev btn-reset" type="button" disabled>
+						<svg class="showcase-nav__btn-img" xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16">
+							<title>Previous product</title><line x1="0" y1="8" x2="18" y2="8" stroke="#fa980d" stroke-width="2"/><polyline points="8,16 1,8 8,0" fill="none" stroke="#fa980d" stroke-width="2"/>
+						</svg>
+					</button>
+					<button class="showcase-nav__btn showcase-nav__btn--next btn-reset" type="button">
+						<svg class="showcase-nav__btn-img" xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16">
+							<title>Next product</title><line x1="0" y1="8" x2="18" y2="8" stroke="#fa980d" stroke-width="2"/><polyline points="8,16 1,8 8,0" fill="none" stroke="#fa980d" stroke-width="2"/>
+						</svg>
+					</button>
+				</section>
 			</section>
-		</section>
 
-	</main>
+		</main>
 
-<!-- ===== FOOTER ========================= -->
+	<!-- ===== FOOTER ========================= -->
 
-	<footer class="page-footer">
-		<p class="copyright">Design by @ <a class="copyright__link color" href="https://dribbble.com/unnoman">Noman Abdullah</a></p>
-	</footer>
+		<footer class="page-footer">
+			<p class="copyright">Design by @ <a class="copyright__link color" href="https://dribbble.com/unnoman">Noman Abdullah</a></p>
+		</footer>
+	</div>
 
+<script src="js/popup.js"></script>
 </body>
 </html>
