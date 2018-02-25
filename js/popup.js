@@ -1,30 +1,10 @@
-var navLink = document.querySelector(".main-nav__btn");
-var navOpen = document.querySelector(".site-nav");
+var navMain = document.querySelector(".site-nav");
+var navToggle = document.querySelector(".main-nav__toggle");
 
-if (navLink && navOpen) {
+  navMain.classList.remove("nojs");
 
-  navLink.addEventListener("click", function (evt) {
+  navToggle.addEventListener("click", function (evt) {
     evt.preventDefault();
-    navOpen.classList.add("show");
-    navLink.classList.add("main-nav__btn--close");
+    navToggle.classList.toggle("main-nav__toggle--opened");
+    navMain.classList.toggle("site-nav--opened");
   });
-
-var navClose = document.querySelector(".main-nav__btn--close");
-
-  navClose.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    navOpen.classList.remove("show");
-    navLink.classList.remove("main-nav__btn--close");
-  });
-
-  window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-      if (navOpen.classList.contains("show")) {
-        navOpen.classList.remove("show");
-      }
-      if (navLink.classList.contains("main-nav__btn--close")) {
-        navLink.classList.remove("main-nav__btn--close");
-      }
-    }
-  });
-}
