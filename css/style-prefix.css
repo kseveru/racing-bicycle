@@ -1,7 +1,7 @@
 :root {
-  --wrap-padding: 7.33vh /*55px*/;
-  --row-head-height: 11.33vh /*85px*/;
-  --row-foot-height: 13.33vh /*100px*/;
+  --wrap-padding: 55px;
+  --row-head-height: 85px;
+  --row-foot-height: 100px;
 }
 
 @font-face {
@@ -27,9 +27,15 @@ html {
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
@@ -48,7 +54,6 @@ a {
 
 img {
   max-width: 100%;
-  max-height: 100%;
   height: auto;
 }
 
@@ -109,25 +114,33 @@ a:focus .color {
 ====================================================================== */
 
 .page-wrap { outline: 1px solid;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 10.93vh 5.6vh /*82px 42px*/ 1fr var(--wrap-padding);
-  grid-template-rows: var(--wrap-padding) 1fr 9.86vh /*74px*/;
+  -ms-grid-columns: 82px 42px 1fr var(--wrap-padding);
+      grid-template-columns: 82px 42px 1fr var(--wrap-padding);
+  -ms-grid-rows: var(--wrap-padding) 1fr 74px;
+      grid-template-rows: var(--wrap-padding) 1fr 74px;
   width: 1200px;
-  height: 100vh /*750px*/;
+  height: 750px;
 }
 
 .page-wrap::before,
 .page-wrap::after {
   content: "";
 
+  -ms-grid-column: 1;
+
   grid-column: 1;
+  -ms-grid-row: 1;
   grid-row: 1;
 
   background-color: #fa980d;
 }
 
 .page-wrap::after {
+  -ms-grid-column: 1;
   grid-column: 1;
+  -ms-grid-row: 3;
   grid-row: 3;
 }
 
@@ -135,10 +148,14 @@ a:focus .color {
 ====================================================================== */
 
 .page-header {
+  -ms-grid-row: 2;
   grid-row: 2;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 4.53vh /*34px*/;
-  grid-template-rows: 1fr var(--row-foot-height);
+  -ms-grid-columns: 1fr 34px;
+      grid-template-columns: 1fr 34px;
+  -ms-grid-rows: 1fr var(--row-foot-height);
+      grid-template-rows: 1fr var(--row-foot-height);
   justify-items: end;
 
   background-color: #fa980d;
@@ -148,9 +165,13 @@ a:focus .color {
 ============================== */
 
 .search {
+  -ms-grid-column: 1;
   grid-column: 1;
+  -ms-grid-row: 2;
   grid-row: 2;
-  align-self: end;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
 }
 
 .search__label {
@@ -189,23 +210,37 @@ a:focus .color {
 .main-nav {
   position: relative;
 
+  -ms-grid-column: 1;
+
+  -ms-grid-column-span: 2;
+
   grid-column: 1/3;
+  -ms-grid-row: 1;
   grid-row: 1;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 4.53vh /*34px*/;
-  grid-template-rows: var(--row-head-height) 1fr;
+  -ms-grid-columns: 1fr 34px;
+      grid-template-columns: 1fr 34px;
+  -ms-grid-rows: var(--row-head-height) 1fr;
+      grid-template-rows: var(--row-head-height) 1fr;
   justify-items: end;
 }
 
 .main-nav__title {
   overflow: hidden;
 
-  grid-column: 1;
-  grid-row: 2;
-  justify-self: end;
-  align-self: center;
+  -ms-grid-column: 1;
 
-  width: 1em;
+  grid-column: 1;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+
+  width: 25px;
   margin: 0;
 
   font-size: 25px;
@@ -217,8 +252,14 @@ a:focus .color {
 
   white-space: nowrap;
 
-  transform: translate(0,100%) rotate(-90deg);
-  transform-origin: 0 0;
+  -webkit-transform: translate(0,100%) rotate(-90deg);
+
+      -ms-transform: translate(0,100%) rotate(-90deg);
+
+          transform: translate(0,100%) rotate(-90deg);
+  -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+          transform-origin: 0 0;
 }
 
 .main-nav__title-inner::after {
@@ -234,7 +275,10 @@ a:focus .color {
 .main-nav__toggle {
   position: relative;
 
+  -ms-grid-column: 2;
+
   grid-column: 2;
+  -ms-grid-row: 2;
   grid-row: 2;
   width: 100%;
   height: 100%;
@@ -260,15 +304,26 @@ a:focus .color {
 
   background: url("../img/icon-arrow.svg") 0 0 no-repeat;
 
-  transition: all 1s;
+  -webkit-transition: all 1.5s;
+
+  -o-transition: all 1.5s;
+
+  transition: all 1.5s;
 }
 
 .main-nav__toggle--opened::after {
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 /* site-nav
 ============================== */
+
+@-webkit-keyframes move {
+ from {left: 0; opacity: 0.5;}
+ to {left: 100%; opacity: 1;}
+}
 
 @keyframes move {
  from {left: 0; opacity: 0.5;}
@@ -299,11 +354,20 @@ a:focus .color {
 
 .site-nav.nojs,
 .site-nav--opened {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 
-  animation: move 1s;
+  -webkit-animation: move 1.5s;
+
+          animation: move 1.5s;
 }
 
 .site-nav__item:not(:first-child) {
@@ -321,7 +385,9 @@ a:focus .color {
 }
 
 .user-nav {
+  -ms-grid-column: 1;
   grid-column: 1;
+  -ms-grid-row: 1;
   grid-row: 1;
 }
 
@@ -356,9 +422,17 @@ a:focus .color {
   position: relative;
   z-index: 10;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 16px;
   height: 16px;
 
@@ -375,16 +449,26 @@ a:focus .color {
 .page-main {
   position: relative;
 
+  -ms-grid-column: 3;
+
   grid-column: 3;
+  -ms-grid-row: 2;
   grid-row: 2;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 60vh /*450px*/ auto 60vh /*450px*/;
-  grid-template-rows: var(--row-head-height) 1fr;
-  align-items: start;
+  -ms-grid-columns: 450px auto 450px;
+      grid-template-columns: 450px auto 450px;
+  -ms-grid-rows: var(--row-head-height) 1fr;
+      grid-template-rows: var(--row-head-height) 1fr;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 
 .page-main__title {
+  -ms-grid-column: 1;
   grid-column: 1;
+  -ms-grid-row: 1;
   grid-row: 1;
   margin: 0;
 
@@ -394,11 +478,18 @@ a:focus .color {
 .watch-video {
   position: relative;
 
+  -ms-grid-column: 3;
+
   grid-column: 3;
+  -ms-grid-row: 1;
   grid-row: 1;
   justify-self: end;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 47px;
   margin-top: 5px;
   padding-right: 62px;
@@ -442,9 +533,14 @@ a:focus .color {
 .showcase {
   position: relative;
 
+  -ms-grid-column: 1;
+
+  -ms-grid-column-span: 3;
+
   grid-column: 1/4;
+  -ms-grid-row: 2;
   grid-row: 2;
-  height: 71.47vh /*536px*/;
+  height: 536px;
 }
 
 /* product
@@ -453,33 +549,48 @@ a:focus .color {
 .product {
   position: relative;
 
+  display: -ms-grid;
+
   display: grid;
-  grid-template-columns: 13.33vh /*100px*/ 1fr 13.33vh /*100px*/;
-  grid-template-rows: 1fr var(--row-foot-height);
-  align-items: center;
+  -ms-grid-columns: 100px 1fr 100px;
+      grid-template-columns: 100px 1fr 100px;
+  -ms-grid-rows: 1fr var(--row-foot-height);
+      grid-template-rows: 1fr var(--row-foot-height);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
 }
 
 .product__img {
+  -ms-grid-column: 2;
   grid-column: 2;
+  -ms-grid-row: 1;
   grid-row: 1;
-  justify-self: center;
-  align-self: start;
-  width: 96.53vh;
-  height: 56.4vh;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
 }
 
 .product__price {
+  -ms-grid-column: 1;
   grid-column: 1;
+  -ms-grid-row: 2;
   grid-row: 2;
 }
 
 .product__link {
   position: relative;
 
+  -ms-grid-column: 3;
+
   grid-column: 3;
+  -ms-grid-row: 2;
   grid-row: 2;
-  justify-self: end;
+  -ms-grid-column-align: end;
+      justify-self: end;
   padding-right: 25px;
 
   color: #2d1c03;
@@ -502,8 +613,12 @@ a:focus .color {
 .product__link--buy {
   position: absolute;
 
+  -ms-grid-row: 1;
+
   grid-row: 1;
-  align-self: start;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
 
   display: none;
 }
@@ -520,17 +635,28 @@ a:focus .color {
 /* showcase-navigation
 ============================== */
 
+.showcase-nav {
+}
+
 .showcase-nav__number {
   position: absolute;
   left: 50%;
   top: 0;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 13.33vh /*100px*/;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100px;
   height: var(--row-head-height);
-  margin: calc(var(--row-head-height) * -1) /*-85px*/ 0 0 -6.67vh /*-50px*/;
+  margin: -85px 0 0 -50px;
 
   font-size: 34px;
   text-align: center;
@@ -543,11 +669,17 @@ a:focus .color {
 .showcase-nav__list {
   position: absolute;
   bottom: 10px;
-  left: 13.33vh /*100px*/;
-  right: 13.33vh /*100px*/;
+  left: 100px;
+  right: 100px;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
 
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0;
   padding: 0;
 
@@ -568,15 +700,18 @@ a:focus .color {
   height: 100%;
 
   background: url("../img/nav-path-active.svg") 50% 50% no-repeat;
-  clip-path: polygon(0% 0%, 0% 100%, 40% 100%, 40% 0%);
+  -webkit-clip-path: polygon(0% 0%, 0% 100%, 40% 100%, 40% 0%);
+          clip-path: polygon(0% 0%, 0% 100%, 40% 100%, 40% 0%);
 }
 
 .showcase-nav__item {
+  min-width: 61px;
+
   z-index: 10;
 }
 
 .showcase-nav__item:not(:first-child) {
-  margin-left: 6.67vh /*50px*/;
+  margin-left: 50px;
 }
 
 .showcase-nav__item:nth-child(3) {
@@ -589,7 +724,6 @@ a:focus .color {
 
 .showcase-nav__link {
   display: inline-block;
-  width: 8.13vh /*61px*/;
 
   vertical-align: baseline;
 
@@ -597,14 +731,10 @@ a:focus .color {
 
   border: 2px solid #d0d0cf;
   border-radius: 50%;
-  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.13);
+  -webkit-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.13);
+          box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.13);
 }
 
-.showcase-nav__link--active {
-  width: 10.93vh /*82px*/;
-}
-
-.showcase-nav__link--prev,
 .showcase-nav__link--active,
 .showcase-nav__link:hover,
 .showcase-nav__link:focus {
@@ -614,11 +744,19 @@ a:focus .color {
 .showcase-nav__btn {
   position: absolute;
   left: 0;
-  top: 28.4vh /*213px*/;
+  top: 212px;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
 
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 38px;
   height: 38px;
   margin-top: -19px;
@@ -631,7 +769,11 @@ a:focus .color {
   left: auto;
   right: 0;
 
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+
+      -ms-transform: rotate(180deg);
+
+          transform: rotate(180deg);
 }
 
 .showcase-nav__btn:hover,
@@ -660,9 +802,11 @@ a:focus .color {
 ====================================================================== */
 
 .page-footer {
+  -ms-grid-column: 3;
   grid-column: 3;
+  -ms-grid-row: 3;
   grid-row: 3;
-  padding: 3.33vh /*25px*/ 0 0;
+  padding: 25px 0 0;
 }
 
 .copyright {
