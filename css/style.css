@@ -1,5 +1,5 @@
 :root {
-  --wrap-padding: 7.33vh /*55px*/;
+  --wrap-padding: calc(9.6vh - 17px) /*7.33vh*/ /*55px*/;
   --row-head-height: 11.33vh /*85px*/;
   --row-foot-height: 13.33vh /*100px*/;
 }
@@ -35,7 +35,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font: normal 400 16px/1 "Bebas Neue", "Arial Narrow", sans-serif;
+  font: normal 400 calc(0.4vh + 13px)/*16px*//1 "Bebas Neue", "Arial Narrow", sans-serif;
   color: #2d1c03;
   text-transform: uppercase;
 
@@ -110,10 +110,12 @@ a:focus .color {
 
 .page-wrap { outline: 1px solid;
   display: grid;
-  grid-template-columns: 10.93vh 5.6vh /*82px 42px*/ 1fr var(--wrap-padding);
-  grid-template-rows: var(--wrap-padding) 1fr 9.86vh /*74px*/;
-  width: 1200px;
+  grid-template-columns: minmax(55px, 10.93vh) 5.6vh /*82px 42px*/ 1fr var(--wrap-padding);
+  grid-template-rows: var(--wrap-padding) 1fr minmax(30px, 9.86vh) /*74px*/;
+  width: 160vh /*1200px*/;
+  max-width: 1200px;
   height: 100vh /*750px*/;
+  max-height: 750px;
 }
 
 .page-wrap::before,
@@ -137,8 +139,8 @@ a:focus .color {
 .page-header {
   grid-row: 2;
   display: grid;
-  grid-template-columns: 1fr 4.53vh /*34px*/;
-  grid-template-rows: 1fr var(--row-foot-height);
+  grid-template-columns: minmax(35px, 1fr) minmax(20px, 4.53vh) /*34px*/;
+  grid-template-rows: 1fr minmax(40px, var(--row-foot-height));
   justify-items: end;
 
   background-color: #fa980d;
@@ -166,6 +168,7 @@ a:focus .color {
   position: absolute;
   left: 0;
   top: 0;
+  z-index: 100;
 
   width: 30px;
   height: 30px;
@@ -192,8 +195,8 @@ a:focus .color {
   grid-column: 1/3;
   grid-row: 1;
   display: grid;
-  grid-template-columns: 1fr 4.53vh /*34px*/;
-  grid-template-rows: var(--row-head-height) 1fr;
+  grid-template-columns: minmax(35px, 1fr) minmax(20px, 4.53vh) /*34px*/;
+  grid-template-rows: minmax(40px, var(--row-head-height)) 1fr;
   justify-items: end;
 }
 
@@ -208,7 +211,7 @@ a:focus .color {
   width: 1em;
   margin: 0;
 
-  font-size: 25px;
+  font-size: calc(2vh + 10px) /*25px*/;
   color: #ffffff;
 }
 
@@ -253,9 +256,9 @@ a:focus .color {
   left: 50%;
   top: 50%;
 
-  width: 12px;
+  width: 10px;
   height: 16px;
-  margin-left: -6px;
+  margin-left: -5px;
   margin-top: -8px;
 
   background: url("../img/icon-arrow.svg") 0 0 no-repeat;
@@ -290,7 +293,7 @@ a:focus .color {
 
   display: none;
   height: calc(100% - var(--row-head-height));
-  padding: 30px;
+  padding: 10px 30px;
 
   text-align: center;
 
@@ -311,6 +314,7 @@ a:focus .color {
 }
 
 .site-nav__link {
+  font-size: 16px;
   color: #ffffff;
   white-space: nowrap;
 }
@@ -378,8 +382,8 @@ a:focus .color {
   grid-column: 3;
   grid-row: 2;
   display: grid;
-  grid-template-columns: 60vh /*450px*/ auto 60vh /*450px*/;
-  grid-template-rows: var(--row-head-height) 1fr;
+  grid-template-columns: 40% /*450px*/ auto 40% /*450px*/;
+  grid-template-rows: minmax(40px, var(--row-head-height)) 1fr;
   align-items: start;
 }
 
@@ -388,7 +392,7 @@ a:focus .color {
   grid-row: 1;
   margin: 0;
 
-  font-size: 34px;
+  font-size: calc(3.2vh + 10px) /*34px*/;
 }
 
 .watch-video {
@@ -399,9 +403,9 @@ a:focus .color {
   justify-self: end;
   display: inline-flex;
   align-items: center;
-  height: 47px;
+  height: calc(3.6vh + 20px) /*47px*/;
   margin-top: 5px;
-  padding-right: 62px;
+  padding-right: calc(3.6vh + 20px + 15px) /*62px*/;
 
   color: #2d1c03;
 }
@@ -414,15 +418,15 @@ a:focus .color {
   right: 0;
   top: 0;
 
-  width: 47px;
-  height: 47px;
+  width: calc(3.6vh + 20px) /*47px*/;
+  height: calc(3.6vh + 20px) /*47px*/;
 
   background-color: #fa980d;
   border-radius: 50%;
 }
 
 .watch-video::after {
-  margin-right: -3px;
+  margin-right: -2px;
 
   background: url("../img/icon-arrow.svg") 50% 50% no-repeat;
 }
@@ -444,7 +448,7 @@ a:focus .color {
 
   grid-column: 1/4;
   grid-row: 2;
-  height: 71.47vh /*536px*/;
+  height: 100% /*71.47vh*/ /*536px*/;
 }
 
 /* product
@@ -454,7 +458,7 @@ a:focus .color {
   position: relative;
 
   display: grid;
-  grid-template-columns: 13.33vh /*100px*/ 1fr 13.33vh /*100px*/;
+  grid-template-columns: minmax(65px, 13.33vh) /*100px*/ 1fr minmax(65px, 13.33vh) /*100px*/;
   grid-template-rows: 1fr var(--row-foot-height);
   align-items: center;
   height: 100%;
@@ -464,9 +468,9 @@ a:focus .color {
   grid-column: 2;
   grid-row: 1;
   justify-self: center;
-  align-self: start;
+  align-self: center;
   width: 96.53vh;
-  height: 56.4vh;
+  max-height: 56.4vh;
 }
 
 .product__price {
@@ -480,7 +484,7 @@ a:focus .color {
   grid-column: 3;
   grid-row: 2;
   justify-self: end;
-  padding-right: 25px;
+  padding-right: calc(3.2vh + 1px) /*25px*/;
 
   color: #2d1c03;
 }
@@ -532,12 +536,12 @@ a:focus .color {
   height: var(--row-head-height);
   margin: calc(var(--row-head-height) * -1) /*-85px*/ 0 0 -6.67vh /*-50px*/;
 
-  font-size: 34px;
+  font-size: calc(3.2vh + 10px) /*34px*/;
   text-align: center;
 }
 
 .showcase-nav__number-count {
-  font-size: 18px;
+  font-size: calc(0.4vh + 15px) /*18px*/;
 }
 
 .showcase-nav__list {
@@ -552,6 +556,7 @@ a:focus .color {
   padding: 0;
 
   background: url("../img/nav-path.svg") 50% 50% no-repeat;
+  background-size: 86.66vh auto;
 
   list-style: none;
 }
@@ -568,6 +573,7 @@ a:focus .color {
   height: 100%;
 
   background: url("../img/nav-path-active.svg") 50% 50% no-repeat;
+  background-size: 86.66vh auto;
   clip-path: polygon(0% 0%, 0% 100%, 40% 100%, 40% 0%);
 }
 
@@ -619,8 +625,9 @@ a:focus .color {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 38px;
-  height: 38px;
+  width: calc(1.6vh + 26px) /*38px*/;
+  height: calc(1.6vh + 26px) /*38px*/;
+
   margin-top: -19px;
 
   border-radius: 50%;
@@ -668,7 +675,7 @@ a:focus .color {
 .copyright {
   margin: 0;
 
-  font-size: 14px;
+  font-size: calc(0.4vh + 11px) /*14px*/;
   text-align: center;
 }
 
