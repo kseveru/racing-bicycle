@@ -130,8 +130,9 @@
     grid-template-rows: 1fr 100px;
   }
 
-  .product__img-wrap {
-    width: auto;
+  .product__img {
+    align-self: start;
+    /*width: auto;*/
   }
 
   .product__link {
@@ -148,9 +149,9 @@
   ============================== */
 
   .showcase-nav__number {
-    width: 100px;
+    width: 70px;
     height: 85px;
-    margin: -85px 0 0 -50px;
+    margin: -85px 0 0 -35px;
 
     font-size: 34px;
   }
