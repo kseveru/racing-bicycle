@@ -41,7 +41,7 @@ body {
 
   background-color: #ffffff;
 
-  min-width: 100vh;
+  /*min-width: 100vh;*/
   /*outline: 5px solid red;*/
 }
 
@@ -331,11 +331,11 @@ a:focus .color {
   grid-row: 1;
 }
 
-@media (min-width: 880px) {
+/*@media (min-width: 880px) {*/
   .user-nav__item--cart {
   margin-right: 10px;
   }
-}
+/*}*/
 
 .user-nav__link {
   color: #ffffff;
