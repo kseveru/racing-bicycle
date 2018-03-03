@@ -29,12 +29,8 @@
   }
 
   .search__input {
-    /*width: 30px;
-    height: 30px;
     padding: 7px 7px 7px 30px;
-
-    background: url("../img/icon-search.svg") 7px 7px no-repeat;
-    background-size: 16px auto;*/
+    background-size: 16px auto;
   }
 
   .search__input:focus {
@@ -79,14 +75,14 @@
   }
 
   .user-nav__item--cart {
-    /*margin-right: 10px;*/
+    margin-right: 10px;
   }
 
   .user-nav__cart-count {
-    /*width: 16px;
+    width: 16px;
     height: 16px;
 
-    font-size: 12px;*/
+    font-size: 12px;
   }
 
 
@@ -123,7 +119,7 @@
   ============================== */
 
   .product {
-    grid-template-columns: minmax(70px, 8.33%) 1fr minmax(70px, 8.33%);
+    grid-template-columns: minmax(71px, 8.33%) 1fr minmax(71px, 8.33%);
     grid-template-rows: 1fr 100px;
   }
 

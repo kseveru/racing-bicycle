@@ -173,10 +173,10 @@ a:focus .color {
 
   width: 30px;
   height: 30px;
-  padding: 7px 7px 7px 30px;
+  padding: 7px 7px 7px 34px;
 
   background: url("../img/icon-search.svg") 5px 5px no-repeat;
-  background-size: 16px auto;
+  background-size: 20px auto;
 
   cursor: pointer;
 }
@@ -184,7 +184,7 @@ a:focus .color {
 .search__input:focus {
   width: 300px;
 
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.25);
   cursor: default;
 }
 
@@ -332,9 +332,7 @@ a:focus .color {
 }
 
 /*@media (min-width: 880px) {*/
-  .user-nav__item--cart {
-  margin-right: 10px;
-  }
+
 /*}*/
 
 .user-nav__link {
@@ -367,10 +365,10 @@ a:focus .color {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
 
-  font-size: 12px;
+  font-size: 16px;
 
   background-color: #2d1c03;
   border-radius: 50%;
@@ -407,7 +405,7 @@ a:focus .color {
   justify-self: end;
   display: inline-flex;
   align-items: center;
-  height: calc(3.6vh + 20px) /*47px*/;
+  height: calc(2.66vh + 27px) /*47px*/;
   margin-top: 5px;
   padding-right: calc(3.6vh + 20px + 15px) /*62px*/;
 
@@ -422,8 +420,8 @@ a:focus .color {
   right: 0;
   top: 0;
 
-  width: calc(3.6vh + 20px) /*47px*/;
-  height: calc(3.6vh + 20px) /*47px*/;
+  width: calc(2.66vh + 27px) /*47px*/;
+  height: calc(2.66vh + 27px) /*47px*/;
 
   background-color: #fa980d;
   border-radius: 50%;
@@ -462,7 +460,7 @@ a:focus .color {
   position: relative;
 
   display: grid;
-  grid-template-columns: minmax(70px, 8.33%) 1fr minmax(70px, 8.33%);
+  grid-template-columns: minmax(71px, 8.33%) 1fr minmax(71px, 8.33%);
   grid-template-rows: 1fr var(--row-foot-height);
   align-items: center;
   height: 100%;
@@ -593,21 +591,21 @@ a:focus .color {
   text-align: center;
 }
 
+.showcase-nav__item--active {
+  width: calc(5.11% + 40px) /*82px*/;
+  /*height: 10%;*/
+}
+
 .showcase-nav__item:not(:first-child) {
   margin-left: 4.2% /*50px*/;
 }
 
 .showcase-nav__item:nth-child(3) {
-  margin-top: -0.66vh /*-5px*/;
+  margin-top: -5px;
 }
 
 .showcase-nav__item:nth-child(4) {
-  margin-top: 1.33vh /*10px*/;
-}
-
-.showcase-nav__item--active {
-  width: calc(5.11% + 40px) /*82px*/;
-  /*height: 10%;*/
+  margin-top: 10px;
 }
 
 .showcase-nav__link {
