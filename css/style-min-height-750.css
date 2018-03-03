@@ -4,8 +4,10 @@
   ====================================================================== */
 
   .page-wrap {
-    grid-template-columns: minmax(70px, 6.83%/*82px*/) 3.5% /*42px*/ 1fr 4.58% /*var(--wrap-padding)*/;
-    grid-template-rows: 55px 1fr 74px;
+    -ms-grid-columns: minmax(70px, 6.83%) 3.5% 1fr 4.58%;
+        grid-template-columns: minmax(70px, 6.83%) 3.5% 1fr 4.58%;
+    -ms-grid-rows: 55px 1fr 74px;
+        grid-template-rows: 55px 1fr 74px;
     max-width: 1200px;
     height: 750px;
   }
@@ -15,47 +17,31 @@
   ====================================================================== */
 
   .page-header {
-    grid-template-columns: minmax(40px, 1fr) minmax(30px, 34px);
-    grid-template-rows: 1fr 100px;
+    -ms-grid-columns: minmax(40px, 1fr) minmax(30px, 34px);
+        grid-template-columns: minmax(40px, 1fr) minmax(30px, 34px);
+    -ms-grid-rows: 1fr 100px;
+        grid-template-rows: 1fr 100px;
   }
 
   /* search
   ============================== */
 
-  .search__label {
-    /*width: 30px;
-    height: 30px;
-    margin: -7px;*/
-  }
-
   .search__input {
-    padding: 7px 7px 7px 30px;
+    padding: 12px 12px 12px 40px;
     background-size: 16px auto;
-  }
-
-  .search__input:focus {
-    /*width: 300px;*/
   }
 
   /* =========================== */
 
   .main-nav {
-    grid-template-columns: minmax(40px, 1fr) minmax(30px, 34px);
-    grid-template-rows: 85px 1fr;
+    -ms-grid-columns: minmax(40px, 1fr) minmax(30px, 34px);
+        grid-template-columns: minmax(40px, 1fr) minmax(30px, 34px);
+    -ms-grid-rows: 85px 1fr;
+        grid-template-rows: 85px 1fr;
   }
 
   .main-nav__title {
     font-size: 25px;
-  }
-
-  /* toggle
-  ============================== */
-
-  .main-nav__toggle::after {
-    /*width: 10px;
-    height: 16px;
-    margin-left: -5px;
-    margin-top: -8px;*/
   }
 
   /* site-nav
@@ -68,10 +54,6 @@
     padding: 30px 55px;
 
     font-size: 25px;
-  }
-
-  .site-nav__item:not(:first-child) {
-    /*margin-top: 20px;*/
   }
 
   .user-nav__item--cart {
@@ -90,8 +72,10 @@
   ====================================================================== */
 
   .page-main {
-    grid-template-columns: 40% /*450px*/ auto 40% /*450px*/;
-    grid-template-rows: 85px 1fr;
+    -ms-grid-columns: 40% auto 40%;
+        grid-template-columns: 40% auto 40%;
+    -ms-grid-rows: 85px 1fr;
+        grid-template-rows: 85px 1fr;
   }
 
   .page-main__title {
@@ -99,15 +83,12 @@
   }
 
   .watch-video {
-    /*height: calc(58% + 20px);*/
     height: 47px;
-    padding-right: /*calc(6.6% + 20px + 15px)*/ 62px;
+    padding-right: 62px;
   }
 
   .watch-video::before,
   .watch-video::after {
-    /*width: calc(22% + 20px);
-    height: calc(58% + 20px);*/
     width: 47px;
     height: 47px;
   }
@@ -119,30 +100,26 @@
   ============================== */
 
   .product {
-    grid-template-columns: minmax(71px, 8.33%) 1fr minmax(71px, 8.33%);
-    grid-template-rows: 1fr 100px;
+    -ms-grid-columns: minmax(71px, 8.33%) 1fr minmax(71px, 8.33%);
+        grid-template-columns: minmax(71px, 8.33%) 1fr minmax(71px, 8.33%);
+    -ms-grid-rows: 1fr 100px;
+        grid-template-rows: 1fr 100px;
   }
 
   .product__img {
-    align-self: start;
-    /*width: auto;*/
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
   }
 
   .product__link {
     padding-right: 25px;
   }
 
-  .product__link::after {
-    /*width: 6px;
-    height: 10px;
-    margin-top: -5px;*/
-  }
-
   /* showcase-navigation
   ============================== */
 
   .showcase-nav__number {
-    width: 70px;
     height: 85px;
     margin: -85px 0 0 -35px;
 
@@ -157,12 +134,6 @@
     bottom: 10px;
     left: 100px;
     right: 100px;
-
-    background-size: 100% auto;
-  }
-
-  .showcase-nav__list::before {
-    background-size: 100% auto;
   }
 
   .showcase-nav__item {
@@ -175,14 +146,6 @@
 
   .showcase-nav__item:not(:first-child) {
     margin-left: 50px;
-  }
-
-  .showcase-nav__item:nth-child(3) {
-    margin-top: -5px;
-  }
-
-  .showcase-nav__item:nth-child(4) {
-    margin-top: 10px;
   }
 
   .showcase-nav__btn {
@@ -206,4 +169,4 @@
     font-size: 14px;
   }
 
-  }
+}
