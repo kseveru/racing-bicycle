@@ -6,8 +6,8 @@
   .page-wrap {
     -ms-grid-columns: 55px 1fr 55px;
         grid-template-columns: 55px 1fr 55px;
-    -ms-grid-rows: minmax(70px, 10.93%) 42px 1fr 74px;
-        grid-template-rows: minmax(70px, 10.93%) 42px 1fr 74px;
+    -ms-grid-rows: 82px 42px 1fr 74px;
+        grid-template-rows: 82px 42px 1fr 74px;
     width: 750px;
   }
 
@@ -68,8 +68,8 @@
   ====================================================================== */
 
   .page-main {
-    -ms-grid-columns: 40% auto 40%;
-        grid-template-columns: 40% auto 40%;
+    -ms-grid-columns: 40% 1fr 40%;
+        grid-template-columns: 40% 1fr 40%;
     -ms-grid-rows: 85px 1fr;
         grid-template-rows: 85px 1fr;
   }
@@ -96,8 +96,8 @@
   ============================== */
 
   .product {
-    -ms-grid-columns: minmax(71px, 12.5%) 1fr minmax(71px, 12.5%);
-        grid-template-columns: minmax(71px, 12.5%) 1fr minmax(71px, 12.5%);
+    -ms-grid-columns: minmax(71px, 15%) 1fr minmax(71px, 15%);
+        grid-template-columns: minmax(71px, 13.33%) 1fr minmax(71px, 13.33%);
     -ms-grid-rows: 1fr 100px;
         grid-template-rows: 1fr 100px;
     padding-top: 0;
@@ -119,8 +119,8 @@
 
   .showcase-nav__list {
     bottom: 10px;
-    left: 70px;
-    right: 70px;
+    left: 13.33%;
+    right: 13.33%;
   }
 
   .showcase-nav__item {
@@ -137,7 +137,7 @@
 
   .showcase-nav__btn {
     left: -45px;
-    top: 213px;
+    top: 50%;
 
     width: 38px;
     height: 38px;
@@ -146,6 +146,7 @@
   }
 
   .showcase-nav__btn--next {
+    left: auto;
     right: -45px;
   }
 

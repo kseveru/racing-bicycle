@@ -72,8 +72,8 @@
   ====================================================================== */
 
   .page-main {
-    -ms-grid-columns: 40% auto 40%;
-        grid-template-columns: 40% auto 40%;
+    -ms-grid-columns: 40% 1fr 40%;
+        grid-template-columns: 40% 1fr 40%;
     -ms-grid-rows: 85px 1fr;
         grid-template-rows: 85px 1fr;
   }
@@ -100,8 +100,8 @@
   ============================== */
 
   .product {
-    -ms-grid-columns: minmax(71px, 8.33%) 1fr minmax(71px, 8.33%);
-        grid-template-columns: minmax(71px, 8.33%) 1fr minmax(71px, 8.33%);
+    -ms-grid-columns: minmax(71px, 9.8%) 1fr minmax(71px, 9.8%);
+        grid-template-columns: minmax(71px, 9.8%) 1fr minmax(71px, 9.8%);
     -ms-grid-rows: 1fr 100px;
         grid-template-rows: 1fr 100px;
   }
