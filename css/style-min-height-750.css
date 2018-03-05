@@ -8,7 +8,6 @@
         grid-template-columns: minmax(70px, 6.83%) 3.5% 1fr 4.58%;
     -ms-grid-rows: 55px 1fr 74px;
         grid-template-rows: 55px 1fr 74px;
-    max-width: 1200px;
     height: 750px;
   }
 

@@ -8,6 +8,7 @@
         grid-template-columns: 6vw 1fr 6vw;
     -ms-grid-rows: minmax(60px, 10.93vw) 5.6vw 1fr minmax(50px, 9.86vw);
         grid-template-rows: minmax(60px, 10.93vw) 5.6vw 1fr minmax(50px, 9.86vw);
+    max-height: 925px;
   }
 
   .page-wrap::after {
