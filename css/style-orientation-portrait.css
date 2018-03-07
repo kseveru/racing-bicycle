@@ -7,8 +7,8 @@
     -ms-grid-columns: 6vw 1fr 6vw;
         grid-template-columns: 6vw 1fr 6vw;
     -ms-grid-rows: minmax(60px, 10.93vw) 5.6vw 1fr minmax(50px, 9.86vw);
-        grid-template-rows: minmax(60px, 10.93vw) 5.6vw 1fr minmax(50px, 9.86vw);
-    max-height: 123vw;
+        grid-template-rows: minmax(60px, 10.93vw) 5.6vw 1fr minmax(55px, 9.86vw);
+    max-height: 160vw;
   }
 
   .page-wrap::after {
@@ -31,9 +31,6 @@
     -ms-grid-rows: minmax(35px, 1fr) minmax(25px, 4.53vw);
         grid-template-rows: minmax(35px, 1fr) minmax(25px, 4.53vw);
     justify-items: start;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: end;
   }
 
   /* search
@@ -257,7 +254,7 @@
   }
 
   .showcase-nav__item:not(:first-child) {
-    margin-left: 4.2vw;
+    margin-left: 5.5vw;
   }
 
   .showcase-nav__btn {

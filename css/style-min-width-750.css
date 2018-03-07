@@ -9,7 +9,7 @@
     -ms-grid-rows: minmax(70px, 82px) 42px 1fr 74px;
         grid-template-rows: minmax(70px, 82px) 42px 1fr 74px;
     width: 750px;
-    max-height: 925px;
+    max-height: 760px /*757px*/;
   }
 
   /* HEADER

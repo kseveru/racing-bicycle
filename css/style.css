@@ -698,17 +698,17 @@ a:focus .color {
 .showcase-nav__item {
   z-index: 10;
 
-  width: calc(3.77% + 30px);
+  width: calc(5% + 20px);
 
   text-align: center;
 }
 
 .showcase-nav__item--active {
-  width: calc(5.11% + 40px);
+  width: calc(6.33% + 30px);
 }
 
 .showcase-nav__item:not(:first-child) {
-  margin-left: 4.2%;
+  margin-left: 5.5%;
 }
 
 .showcase-nav__item:nth-child(3) {
