@@ -8,7 +8,7 @@
         grid-template-columns: 6vw 1fr 6vw;
     -ms-grid-rows: minmax(60px, 10.93vw) 5.6vw 1fr minmax(50px, 9.86vw);
         grid-template-rows: minmax(60px, 10.93vw) 5.6vw 1fr minmax(50px, 9.86vw);
-    max-height: 925px;
+    max-height: 123vw;
   }
 
   .page-wrap::after {
@@ -179,8 +179,8 @@
     display: grid;
     -ms-grid-columns: 40vw 1fr 40vw;
         grid-template-columns: 40vw 1fr 40vw;
-    -ms-grid-rows: auto 1fr;
-        grid-template-rows: auto 1fr;
+    -ms-grid-rows: minmax(55px, auto) 1fr;
+        grid-template-rows: minmax(55px, auto) 1fr;
   }
 
   .page-main__title {
