@@ -206,8 +206,8 @@
   ============================== */
 
   .product {
-    -ms-grid-columns: minmax(71px, 15%) 1fr minmax(71px, 15%);
-        grid-template-columns: minmax(71px, 15%) 1fr minmax(71px, 15%);
+    -ms-grid-columns: minmax(75px, 15%) 1fr minmax(75px, 15%);
+        grid-template-columns: minmax(75px, 15%) 1fr minmax(75px, 15%);
     -ms-grid-rows: 1fr 12.5vw calc(5.11vw + 45px);
         grid-template-rows: 1fr 12.5vw calc(5.11vw + 45px);
   }

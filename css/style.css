@@ -1,8 +1,10 @@
 @font-face {
   font-family: "Bebas Neue";
   font-style: normal;
-  font-weight: 700;
-  src: local("Bebas Neue"), local("Bebas Neue Bold"), url("../fonts/bebas_neue_bold.woff2") format("woff2");
+  font-weight: 400;
+  src: local("Bebas Neue"), local("Bebas Neue Bold"), local("BebasNeueBold"),
+      url("../fonts/bebas_neue_bold.woff2") format("woff2"),
+      url("../fonts/bebas_neue_bold.woff") format("woff");
 }
 
 /* GLOBAL
@@ -540,8 +542,8 @@ a:focus .color {
 
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: minmax(71px, 8.33%) 1fr minmax(71px, 8.33%);
-      grid-template-columns: minmax(71px, 8.33%) 1fr minmax(71px, 8.33%);
+  -ms-grid-columns: minmax(75px, 8.33%) 1fr minmax(75px, 8.33%);
+      grid-template-columns: minmax(75px, 8.33%) 1fr minmax(75px, 8.33%);
   -ms-grid-rows: 1fr 13.33vh;
       grid-template-rows: 1fr 13.33vh;
   -webkit-box-align: center;

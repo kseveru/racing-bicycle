@@ -101,8 +101,8 @@
   ============================== */
 
   .product {
-    -ms-grid-columns: minmax(71px, 15%) 1fr minmax(71px, 15%);
-        grid-template-columns: minmax(71px, 13.33%) 1fr minmax(71px, 13.33%);
+    -ms-grid-columns: minmax(75px, 15%) 1fr minmax(75px, 15%);
+        grid-template-columns: minmax(75px, 13.33%) 1fr minmax(75px, 13.33%);
     -ms-grid-rows: 1fr 100px;
         grid-template-rows: 1fr 100px;
     padding-top: 0;
