@@ -5,7 +5,7 @@
 **Верстка**: резиновая  
 **Страниц**: 1  
 **Макет**: [Abdullah Un Noman](https://dribbble.com/unnoman)  
-
+<table><tr><td>
 <a href="https://kseveru.github.io/img/preview-racing-bicycle.png" title="Открыть макет">
   <img src="https://kseveru.github.io/img/preview-racing-bicycle-small.png">
-</a>
+  </a></td></tr></table>
