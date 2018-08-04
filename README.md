@@ -1,6 +1,11 @@
-# racing-bicycle
-Резиновая вёрстка (1 страница)
+# Racing bicycle #
 
-https://kseveru.github.io/racing-bicycle/
+[kseveru.github.io/racing-bicycle](https://kseveru.github.io/racing-bicycle/ "Открыть проект")
 
-Макет: Abdullah Un Noman (https://dribbble.com/unnoman)
+**Верстка**: резиновая  
+**Страниц**: 1  
+**Макет**: [Abdullah Un Noman](https://dribbble.com/unnoman)  
+
+<a href="https://kseveru.github.io/img/preview-racing-bicycle.png" title="Открыть макет">
+  <img src="https://kseveru.github.io/img/preview-racing-bicycle-small.png">
+</a>
