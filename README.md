@@ -10,7 +10,7 @@
   <tr>
     <td>
       <a href="https://kseveru.github.io/img/preview-racing-bicycle.png" title="Открыть макет">
-        <img src="https://kseveru.github.io/img/preview-racing-bicycle-small.png">
+        <img src="https://kseveru.github.io/img/preview-racing-bicycle-small.png" alt="макет настольной версии">
       </a>
     </td>
   </tr>
